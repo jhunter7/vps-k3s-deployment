@@ -1,0 +1,13 @@
+name: Test Remote Kubernetes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-k8s:
+    runs-on: self-hosted
+    steps:
+    - name: Run kubectl get nodes
+      run: kubectl get nodes
